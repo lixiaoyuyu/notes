@@ -1,10 +1,14 @@
-**1.创建新节点的方法：**
+[TOC]
+
+
+
+### **1.创建新节点的方法：**
 
 - `document.createElement(tag)` — 用给定的标签创建一个元素节点，
 - `document.createTextNode(value)` — 创建一个文本节点（很少使用），
 - `elem.cloneNode(deep)` — 克隆元素，如果 `deep==true` 则与其后代一起克隆
 
-**2.插入元素**
+### **2.插入元素**
 
 2.1.简单方法
 
@@ -31,28 +35,28 @@
 
 - 如果我们要将一个元素 移动到另一个地方，则无需将其从原来的位置中删除。所有插入方法都会自动从旧位置删除该节点。
 
-**3.删除节点**
+### **3.删除节点**
 
 -  移除一个节点，可以使用 `node.remove()`。 
 
-**4.克隆节点**
+### **4.克隆节点**
 
 - 调用 `elem.cloneNode(true)` 来创建元素的一个“深”克隆 — 具有所有特性（attribute）和子元素。如果我们调用 `elem.cloneNode(false)`，那克隆就不包括子元素。 
 
-**5.老式的方法添加元素**
+### **5.老式的方法添加元素**
 
 - parentElem.appendChild(node)  将 `node` 附加为 `parentElem` 的最后一个子元素。
 - parentElem.insertBefore(node, nextSibling)  在 `parentElem` 的 `nextSibling` 前插入 `node`。 
 -  `parentElem` .removeChild(node) ` 在 `删除parentElem` 的node 子元素
 - parentElem.replaceChild(node, oldChild) 将 `parentElem` 的后代中的 `oldChild` 替换为 `node`。
 
-**6.文档写入**
+### **6.文档写入**
 
 - `document.write` 调用只在页面加载时工作。
 
 - 如果我们页面加载完毕调用它，则现有文档内容将被擦除。
 
-**7.类名**
+### **7.类名**
 
 -  可以使用 `className` 对完整的类字符串进行操作，
 - 可以使用使用 `classList` 对单个类进行操作 
@@ -63,7 +67,7 @@
 - `elem.classList.toggle(class)` — 如果类不存在就添加类，存在就移除它。
 - `elem.classList.contains(class)` — 检查给定类，返回 `true/false`。
 
-**8.字符串的形式添加样式**
+### **8.字符串的形式添加样式**
 
 - 想要以字符串的形式设置完整的样式，可以使用特殊属性 `style.cssText`：  它不是进行添加，而是替换它们 
 
@@ -82,13 +86,13 @@
   </script>
   ```
 
-**9.css的单位**
+### **9.css的单位**
 
 -  不要忘记将 CSS 单位添加到值上。 否则不起作用
 
 -  **`style` 属性仅对 `"style"` 特性（attribute）值起作用，而没有任何 CSS 级联（cascade）** 
 
-**10.css样式的值获取**
+### **10.css样式的值获取**
 
 - getComputedStyle(element, [pseudo])
 
@@ -105,7 +109,7 @@
 
    
 
-**11.几何属性**
+### **11.几何属性**
 
 - 除了 `scrollLeft/scrollTop` 外，所有属性都是只读的。
 
@@ -144,17 +148,17 @@
 
 
 
-**窗口的 width/height**
+### **窗口的 width/height**
 
 -  为了获取窗口（window）的宽度和高度，我们可以使用 `document.documentElement` 的 `clientWidth/clientHeight`： 
 
 -  浏览器也支持 `window.innerWidth/innerHeight` 属性  包括了滚动条。 
 
-**文档的 width/height**
+### **文档的 width/height**
 
 -  从理论上讲，由于根文档元素是 `document.documentElement`，并且它包围了所有内容，因此我们可以通过使用 `documentElement.scrollWidth/scrollHeight` 来测量文档的完整大小。 
 
-**获得当前滚动DOM** 
+### **获得当前滚动DOM** 
 
 - 元素的当前滚动状态在 `elem.scrollLeft/scrollTop` 中。
 
@@ -164,7 +168,7 @@
 
 
 
-**滚动：scrollTo，scrollBy，scrollIntoView  禁止滚动**
+### **滚动：scrollTo，scrollBy，scrollIntoView  禁止滚动**
 
 -  方法 `scrollBy(x,y)` 将页面滚动至 **相对于当前位置的 `(x, y)` 位置**。例如，`scrollBy(0,10)` 会将页面向下滚动 `10px`。 
 

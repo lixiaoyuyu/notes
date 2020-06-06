@@ -1,4 +1,8 @@
-****Symbol
+[TOC]
+
+
+
+### **Symbol**
 
 1.获取方式
 
@@ -24,7 +28,7 @@ Symbol. keyFor ()
 
 
 
-**String**
+### **String**
 
 1. `String.fromCharCode()`方法，不 可以识别大于`0xFFFF`的字符
 
@@ -40,7 +44,7 @@ Symbol. keyFor ()
 -  `repeat`（）方法返回一个新字符串，表示将原字符串重复`n`次。  'na'.repeat('3') // "nanana"
 -  `matchAll()`方法返回一个正则表达式在当前字符串的所有匹配，
 
- **Number**
+###  **Number**
 
 1.数值方法
 
